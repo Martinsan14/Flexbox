@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box; /*This will make that if we add padding and border the widht and height will remain the same the content will adjust */
+  }
+
+header{
+    background-color: black;
+    color:aliceblue;
+    text-align: center;
+    text-transform: uppercase;
+    border: 3px solid yellow;
+}
+
+body{
+    margin:0;
+    background-color: red;
+    padding: 25px 2px;
+}
+
+
+.gallery{
+    padding-top: 20px;
+    display:flex; /*It enables a flexible layout system for the elements inside the container, allowing you to easily arrange and align them in a row or column.*/
+    flex-direction: row; /*top to bottom*/
+    flex-wrap: wrap; /*allows items to wrap onto new lines when there isn't enough space in the container. So the lower bar won't appear*/
+    justify-content: center; 
+    align-items: center;
+    max-width: 1440px;
+    gap: 16px;
+    margin: 0 auto;
+}
+
+.gallery img{  /*This will affect all elements inside the element with the gallery class */
+   width: 100%;
+   max-width: 350px;
+   height: 300px;
+   object-fit: cover; /*Cuts the image so it retains its width and height so no distortion is made*/
+   border-radius: 9px;
+
+}
+
+.gallery::after {
+    text-align: center;
+    content: "";
+    width: 350px;
+  }
+  
